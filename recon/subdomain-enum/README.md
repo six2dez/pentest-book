@@ -30,6 +30,10 @@ cero example.com
 # https://github.com/UnaPibaGeek/ctfr
 python3 ctfr.py -d domain.com
 
+# Active crtsh monitoring
+#https://github.com/g0ldencybersec/gungnir
+gungnir -r domains.txt
+
 # https://github.com/gwen001/github-subdomains
 github-subdomains -d example.com -t tokens.txt -o output.txt
 
@@ -92,11 +96,13 @@ dnsx -retry 3 -a -aaaa -cname -ns -ptr -mx -soa -resp -silent -l subdomains.txt
 ```
 
 ## DNS wordlists
+
 ```
 # https://gist.githubusercontent.com/six2dez/a307a04a222fab5a57466c51e1569acf/raw
 # https://wordlists-cdn.assetnote.io/data/manual/best-dns-wordlist.txt
 # https://gist.github.com/jhaddix/f64c97d0863a78454e44c2f7119c2a6a
 ```
+
 ## Other techniques
 
 ### Google Analytics ID
