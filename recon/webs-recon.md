@@ -45,11 +45,11 @@ ffuf -mc all -fc 404 -ac -sf -s -w wordlist.txt -u https://www.domain.com/FUZZ
 ### URL extraction
 
 ```bash
-# https://github.com/jaeles-project/gospider
-gospider -S websites.txt --js -t 20 -d 2 --sitemap --robots -w -r > urls.txt
+ # https://github.com/jaeles-project/gospider
+ gospider -S websites.txt --js -t 20 -d 2 --sitemap --robots -w -r > urls.txt
 
-# https://github.com/lc/gau
- cat websites.txt | gau -subs 
+ # https://github.com/lc/gau
+ cat websites.txt | gau --subs 
  
  # https://github.com/tomnomnom/waybackurls 
  cat websites.txt | waybackurls 
@@ -59,6 +59,13 @@ gospider -S websites.txt --js -t 20 -d 2 --sitemap --robots -w -r > urls.txt
  
  # https://github.com/Josue87/roboxtractor 
  cat webs.txt | roboxtractor -m 1 -wb
+
+ # https://github.com/projectdiscovery/katana
+ katana -u target.com -ps -silent -pss waybackarchive,commoncrawl,alienvault -o urls.txt ##Passive mode
+ katana -u target.com -duc -silent -nc -jc -kf all -fx -xhr -ef woff,css,png,svg,jpg,woff2,jpeg,gif,svg -aff -o urls.txt ##Crawling and Spidering
+
+ # https://github.com/xnl-h4ck3r/waymore
+ waymore -i target.com -mode U -oU urls.txt
 ```
 
 ### Filtering
